@@ -1,0 +1,204 @@
+
+.cardcontainer
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.carbox
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+.carbox:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.carbox:after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  filter: blur(30px);
+  transition: 0.5s;
+}
+.carbox:nth-child(3):before,
+.carbox:nth-child(3):after
+{
+  transform: skewX(-15deg);
+}
+.carbox:hover:before,
+.carbox:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+.carbox:nth-child(1):before,
+.carbox:nth-child(1):after
+{
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.carbox:nth-child(2):before,
+.carbox:nth-child(2):after
+{
+  background: linear-gradient(315deg,#03A9F4,#ff0058);
+}
+.carbox:nth-child(3):before,
+.carbox:nth-child(3):after
+{
+  background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.carbox span
+{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 50;
+  pointer-events: none;
+}
+.carbox span:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: cardanimate 2s linear infinite;
+}
+.carbox:hover span:before
+{
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  opacity: 1;
+}
+.carbox:nth-child(1):hover span:before{
+  top: -150px;
+
+}
+.carbox:nth-child(2):hover span:before{
+  top: -200px;
+
+}
+
+.carbox span:after
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s linear infinite;
+  animation-delay: -1s;
+}
+.carbox:hover span:after
+{
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  opacity: 1;
+}
+.carbox:nth-child(1):hover span::after{
+  bottom: -120px;
+
+}
+.carbox:nth-child(2):hover span::after{
+  bottom: -190px;
+
+}
+@keyframes cardanimate
+{
+  0%,100%
+  {
+    transform: translateY(10px);
+  }
+  50%
+  {
+    transform: translateY(-10px);
+  }
+}
+.carbox .cardcontent2
+{
+  position: relative;
+  left: 0;
+  z-index: 1;
+  padding: 20px 40px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+  
+.carbox:hover .cardcontent2
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+.carbox .cardcontent2 h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.carbox .cardcontent2 p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+.carbox .cardcontent2 a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  text-decoration: none;
+  padding: 10px;
+  background: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: 0.5s;
+}

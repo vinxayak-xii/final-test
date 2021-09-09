@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+#minting{
+  margin-top: 5px;
+}
+.mintbanner
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/images/mintpage/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mintbanner .mintcontent
+{
+  max-width: 550px;
+}
+.mintbanner .mintcontent h2
+{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.mintbanner .mintcontent h2 span
+{
+  font-weight: 800;
+}
+.mintbanner .mintcontent p
+{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+}
+#pixelbtn
+{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+
+.soc
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.soc li
+{
+  list-style: none;
+}
+.soc li a
+{
+  text-decoration: none;
+}
+.soc li a img
+{
+  filter: invert(1);
+  transform: scale(0.6);
+}
+
+
+@media (max-width: 991px)
+{
+  #mintheader
+  {
+    padding: 20px 50px;
+  }
+  #mintheader .logo
+  {
+    max-width: 80px
+  }
+  #mintheader .toggle
+  {
+    max-width: 40px;
+    cursor: pointer;
+  }
+  .mintbanner
+  {
+    padding: 100px 50px;
+  }
+  .mintbanner .mintcontent h2
+  {
+      font-weight: 400;
+      font-size: 2em;
+      letter-spacing: 0.05em;
+  }
+  .mintbanner .mintcontent p
+  {
+      font-size: 1em;
+  }
+
+  .soc
+  {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 0;
+    margin-top: 40px;
+    flex-direction: row;
+  }
+  .soc li
+  {
+    margin: 0 5px;
+  }
+}

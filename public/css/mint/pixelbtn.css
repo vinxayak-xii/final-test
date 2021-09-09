@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#pixelbtn
+{
+  position: relative;
+  width: 180px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.5s;
+  margin-left: -50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#pixelbtn:hover
+{
+  color: rgb(0, 238, 255);
+  background: #730bec url(/images/mintpage/pixel2.png);
+  background-size: 180px;
+  transition-delay: 0.8s;
+  cursor: pointer;
+  animation: pixelanimate 0.8s steps(8) forwards;
+}
+
+@keyframes pixelanimate
+{
+  0%
+  {
+    background-position-y: 0px;
+  }
+  100%
+  {
+    background-position-y: -480px;
+  }
+}

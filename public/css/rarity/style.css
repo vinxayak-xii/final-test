@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+.rarecontainer
+{
+	position: relative;
+	width: 1000px;
+	display: flex;
+	justify-content: space-around;
+}
+.rarecontainer .rarecards
+{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rarecontainer .rarecards:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,.1);
+	z-index: 20;
+	pointer-events: none;
+}
+.rarecontainer .rarecards:nth-child(1),
+.rarecontainer .rarecards:nth-child(1) .overlay
+{
+	background: linear-gradient(45deg,#3503ad,#f7308c)
+}
+.rarecontainer .rarecards:nth-child(2),
+.rarecontainer .rarecards:nth-child(2) .overlay
+{
+	background: linear-gradient(45deg,#ccff00,#09afff)
+}
+.rarecontainer .rarecards:nth-child(3),
+.rarecontainer .rarecards:nth-child(3) .overlay
+{
+	background: linear-gradient(45deg,#e91e63,#ffeb3b)
+}
+.rarecontainer .rarecards .imgBox
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.rarecontainer .rarecards .imgBox h2
+{
+	margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.rarecontainer .rarecards .overlay
+{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	box-sizing: border-box;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+.rarecontainer .rarecards .overlay:hover
+{
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: none;
+	opacity: 0.9;
+	border-radius: 0;
+}
+.rarecontainer .rarecards .overlay:before
+{
+	content: 'Read';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-delay: 0.5s;
+}
+.rarecontainer .rarecards .overlay:hover:before
+{
+	display: none;
+	transition-delay: 0s;
+}
+.rarecontainer .rarecards .rarecontent
+{
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 1;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0s;
+	color: #fff;
+}
+.rarecontainer .rarecards .rarecontent h2
+{
+	margin: 0;
+	padding: 0;
+}
+.rarecontainer .rarecards .overlay:hover ~ .rarecontent
+{
+	opacity: 1;
+	visibility: visible;
+	transition: 0.2s;
+	transition-delay: 0.5s;
+}
+
+@media (max-width: 991px)
+{
+	.rarecontainer{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		
+		row-gap: 10px;
+	}
+	.rarecards{
+		margin-left: 37%;
+		display:flex;
+		justify-items: center;
+		align-items: center;
+	}
+}
